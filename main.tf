@@ -3,11 +3,7 @@ variable "region"           { default     = "us-west-2"                      }
 variable "environment"      { default     = "stg"                            }
 variable "app_name"         { default     = "paolo"                          }
 variable "base_domain"      { default     = "rally-dev.io"                   }
-/* =========================================================================
- * we require an `us-east-1`-based aws provider to extract the ACM certificate
- * due to a restriction on API gateway, which can only handle certs from that
- * region.
- */
+/* ========================================================================= */
 provider "aws" {
   alias                   = "certificate"
   region                  = "us-east-1"
