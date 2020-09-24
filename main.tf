@@ -2,12 +2,12 @@
 variable "region"           { default     = "us-west-2"                      }
 variable "environment"      { default     = "stg"                            }
 variable "app_name"         { default     = "paolo"                          }
-variable "base_domain"      { default     = "rally-dev.io"                   }
+variable "base_domain"      { default     = "paolo.zone"                   }
 /* ========================================================================= */
 provider "aws" {
   alias                   = "certificate"
   region                  = "us-east-1"
-  profile                 = "rally"
+  profile                 = "aws-test"
   shared_credentials_file = "$HOME/.aws/credentials"
 }
 /* ========================================================================= */
